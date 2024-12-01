@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+::-webkit-scrollbar{
+    width: 10px;
+  }
+::-webkit-scrollbar-track{
+    background: #fff; 
+}
+::-webkit-scrollbar-thumb{
+    background: #2a435f;
+    border-radius: 5px;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(-45deg, #83aada, #466995, #2b3d50, #345d8a, #092544);
+    margin: 0;
+    padding: 0;
+    background-size: 400% 400%;
+    animation: bg 10s infinite;
+    padding: 10px 10px;
+}
+@keyframes bg{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 100%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+.resume-container{
+    max-width: 900px;
+    margin: 20px auto;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.header{
+    background-color: #466995;
+    padding: 20px;
+    height: auto;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.upper-gap{
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.gap{
+    width: 310px;
+    background-color: #2b3d50;
+}
+.profile-text h1{
+    font-size: 40px;
+    margin: 0;
+}
+.profile-text p{
+    margin: 5px 0 0 0;
+    font-size: 14px;
+}
+.profile-pic img{
+    background: #fff;
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 5px solid #7d99bb;
+}
+.main-content{
+    display: flex;
+    justify-content: space-between;
+}
+.left-column, .right-column{
+    padding: 20px;
+}
+.left-column{
+    background-color: #2b3d50;
+    color: #fff;
+    width: 30%;
+    flex-shrink: 0;
+}
+.right-column{
+    width: 70%;
+    background-color: #fff;
+}
+.contact-info ul, .skills ul{
+    list-style: none;
+    padding: 0;
+}
+.contact-info ul li, .skills ul li{
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.contact-info ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+.skills h2, .section h2{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.right-head{
+    display: flex;
+    align-items: center;
+}
+.right-head::after{
+    content: "";
+    flex-grow: 1;
+    height: 2px;
+    background-color: #333;
+    margin-left: 10px;
+}
+.skills ul{
+    list-style-type: none;
+    padding: 0;
+}
+.skills ul li{
+    background-color: #465e79;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    display: inline-block;
+}
+.section h2{
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    color: #333;
+}
+.section .left-head{
+    color: #fff;
+}
+.right-column p{
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+.right-column strong{
+    color: #2b3d50;
+}
+
+
+@media (max-width: 768px) {
+    .left-column {
+        width: 40%;
+    }
+    .right-column {
+        width: 60%;
+    }
+}
+
+@media (max-width: 600px) {
+    .header{
+        flex-direction: column-reverse;
+    }
+    .profile-text{
+        text-align: center;
+    }
+    .profile-pic img{
+        width: 200px;
+        height: 200px;
+    }
+    .gap{
+        width: 100%;
+        background-color: #466995;
+    }
+    .left-column {
+        width: auto;
+    }
+    .right-column {
+        width: auto;
+    }
+    .main-content{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 440px) {
+    .profile-text h1{
+        font-size: 30px;
+    }
+    .profile-text p{
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 390px) {
+    .profile-pic img{
+        height: 160px;
+        width: 160px;
+    }
+}
+
+@media (max-width: 500px) {
+    .section h2{
+        font-size: 14px;
+    }
+    .right-column p{
+        font-size: 12px;
+    }
+    .left-column li{
+        font-size: 12px;
+    }
+    .contact-info ul li{
+        font-size: 12px;
+    }
+    .skills ul li{
+        font-size: 12px;
+    }
+}
